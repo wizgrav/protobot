@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title> Ime kai to Proto Bot leme</title>
+  <style type='text/css'>
+    img {
+    opacity:0;
+}
+  </style>
+  
+</head>
+<body>
+  <img id="emit" src=""/>
+  
+
+
+<script type='text/javascript'>//<![CDATA[ 
+
+
+var emit = document.getElementById("emit");
+var count=0;
+window.setInterval(function(){
+    var j = navigator.webkitGetGamepads()[0];
+    emit.src = "/"+j.axes[1]+"/"+j.axes[3]+"/"+(count++);
+    console.log(emit.src)
+},100);
+
+//]]>  
+
+</script>
+
+
+</body>
+
+
+</html>
+
